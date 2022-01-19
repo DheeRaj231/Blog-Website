@@ -1,0 +1,26 @@
+<!-- including header content -->
+<%- include('./partials/header') %>
+    <!-- displaying and formating the highlighted content on home page -->
+    <h1>Home</h1>
+    <p>
+        <%= StartingContent %>
+
+
+
+            <% postcont.forEach(function(post){ %>
+                <h1>
+                    <%= post.title %>
+                </h1>
+                <p>
+                    <%= post.content.substring(0,120)+"...." %>
+                        <a href="/posts/<%=post.title%>">Read More</a>
+
+
+                        <% } ) %>
+
+
+
+                </p>
+
+                <!-- including footer from partials -->
+                <%- include('./partials/footer') %>
